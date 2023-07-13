@@ -1,8 +1,8 @@
 import React from 'react';
-import arrayDestruct from '../assets/portfolio/arrayDestruct.jpg';
-import installNode from '../assets/portfolio/installNode.jpg';
+import chatyou from '../assets/portfolio/chatyou.PNG';
+import mailbox from '../assets/portfolio/mailbox.PNG'
 import navbar from '../assets/portfolio/navbar.jpg';
-import reactParallax from '../assets/portfolio/reactParallax.jpg';
+import pinterest from "../assets/portfolio/pinterest.PNG"
 import reactSmooth from '../assets/portfolio/reactSmooth.jpg';
 import reactWeather from '../assets/portfolio/reactWeather.jpg';
 
@@ -10,11 +10,11 @@ const Portfolio = () => {
   const portfolios = [
     {
       id: 1,
-      src: arrayDestruct,
+      src: chatyou,
     },
     {
       id: 2,
-      src: reactParallax,
+      src: pinterest,
     },
     {
       id: 3,
@@ -26,7 +26,7 @@ const Portfolio = () => {
     },
     {
       id: 5,
-      src: installNode,
+      src: mailbox,
     },
     {
       id: 6,
