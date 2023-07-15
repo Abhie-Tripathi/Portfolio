@@ -1,37 +1,43 @@
 import React from 'react';
 import chatyou from '../assets/portfolio/chatyou.PNG';
 import mailbox from '../assets/portfolio/mailbox.PNG'
-import navbar from '../assets/portfolio/navbar.jpg';
+import disney from "../assets/portfolio/disney.PNG"
 import pinterest from "../assets/portfolio/pinterest.PNG"
-import reactSmooth from '../assets/portfolio/reactSmooth.jpg';
-import reactWeather from '../assets/portfolio/reactWeather.jpg';
+import genericstore from "../assets/portfolio/genericstore.PNG"
+
 
 const Portfolio = () => {
   const portfolios = [
     {
       id: 1,
       src: chatyou,
+      demo: "https://chatyou-78472.web.app",
+      code: "https://github.com/Abhie-Tripathi/ChatYou"
     },
     {
       id: 2,
       src: pinterest,
+      demo: "https://pinyourinterest.netlify.app",
+      code: "https://github.com/Abhie-Tripathi/pinterest"
     },
     {
       id: 3,
-      src: navbar,
+      src: disney,
+      demo: "https://redisney.netlify.app",
+      code: "https://github.com/Abhie-Tripathi/disney"
     },
     {
       id: 4,
-      src: reactSmooth,
+      src: mailbox,
+      demo: "https://maiilbox.netlify.app",
+      code: "https://github.com/Abhie-Tripathi/mail-box"
     },
     {
       id: 5,
-      src: mailbox,
-    },
-    {
-      id: 6,
-      src: reactWeather,
-    },
+      src: genericstore,
+      demo: "https://genericstore.netlify.app",
+      code: "https://github.com/Abhie-Tripathi/E-Commerce"
+    }
   ];
 
   return (
@@ -42,12 +48,12 @@ const Portfolio = () => {
           <p className="py-3">Check out some of my work here</p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-4 sm:px-0">
-          {portfolios.map(({ id, src }) => (
+          {portfolios.map(({ id, src, demo, code }) => (
             <div key={id} className="shadow-md shadow-gray-600 rounded-lg">
               <img className="rounded-md duration-200 hover:scale-105" src={src} alt="" />
               <div className="flex items-center justify-center">
-                <button className="w-full px-6 py-1 m-4 duration-200 hover:scale-105">Demo</button>
-                <button className="w-full px-6 py-1 m-4 duration-200 hover:scale-105">Code</button>
+                <a href={demo} target='_blank' rel="noreferrer"><button className="w-full px-6 py-1 m-4 duration-200 hover:scale-105">Demo</button></a>
+                <a href={code} target='_blank' rel="noreferrer"><button className="w-full px-6 py-1 m-4 duration-200 hover:scale-105">Code</button></a>
               </div>
             </div>
           ))}
